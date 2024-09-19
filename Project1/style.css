@@ -6,6 +6,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.display{
+.images{
     display: inline-block;
+    width: 200px;
 }

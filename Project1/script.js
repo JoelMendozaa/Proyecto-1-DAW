@@ -9,7 +9,7 @@ if (cartel == null || cartel <= 0){        // Si el numero escrito por teclado e
     alert("Debes introducir una cantidad mayor de 0");
 } else{
     for (let i  = 0; i < cartel; i++){          // Sino, muestra las imagenes de los cartes tantas veces se haya escrito por teclado
-        document.write(`<div class="display">`);
+        document.write(`<div class="images">`);
         document.write(`<img src = "images/WORTEN.png">`);
         document.write(`</div>`);
     }
@@ -19,7 +19,7 @@ if (cartel == null || cartel <= 0){        // Si el numero escrito por teclado e
 /* NUMEROS Y PUERTAS */
 
 var numPuertas = parseInt(prompt ("Escribe el numero de puerta"));
-document.write(`<div class = "display">`);
+document.write(`<div class = "images">`);
 numPuertas +=2;
 document.write(`</div>`)
 
