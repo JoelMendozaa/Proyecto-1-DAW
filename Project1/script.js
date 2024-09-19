@@ -7,7 +7,7 @@ var divPrinc = document.getElementById("imgCartel")
 
 
 
-/*CARTELES*/
+/* CARTELES */
 var cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));
 
 for (let i  = 0; cartel > 0; i++){
@@ -17,3 +17,21 @@ for (let i  = 0; cartel > 0; i++){
        img.src = "images/WORTEN.png"
     }
 }
+
+/* NUMEROS */
+
+
+
+/* PUERTAS */
+
+
+
+/* ESCAPARATES Y OFERTAS */
+
+
+
+/* SEMAFOROS Y RELOJ */
+
+
+
+/* COCHES */
