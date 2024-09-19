@@ -1,13 +1,19 @@
-var cartel = prompt("Escriba el número del carteles que busca por favor");
-var message;
+var divId = document.createElement("div");
 
-if (cartel <= 0 ){
-    message = "El numero no puede ser igual o menor de 0";
-} else if(cartel %= 1){
-    message = "No puede ser decimales";
-} else {
-    message = "Creado";
+var img = document.createElement("img");
+
+var divPrinc = document.getElementById("imgCartel")
+
+
+
+
+/*CARTELES*/
+var cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));
+
+for (let i  = 0; cartel > 0; i++){
+    if (cartel == null){
+        alert("Debes introducir una cantidad mayor de 0");
+    } else {
+       img.src = "images/WORTEN.png"
+    }
 }
-
-var messageBox = document.getElementById('message');
-messageBox.innerHTML= message;
