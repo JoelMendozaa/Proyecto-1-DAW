@@ -18,25 +18,32 @@ if (cartel == null || cartel <= 0){        // Si el numero escrito por teclado e
 
 /* NUMEROS Y PUERTAS */
 
-var numPuertas = parseInt(prompt ("Escribe el numero de puerta"));
-document.write(`<div class = "images">`);
-numPuertas +=2;
-document.write(`</div>`)
+var numPuertas = parseInt(prompt ("Escribe el numero de puerta por el que se inicia"));     // A través de un prompt, se pide un numero entero
 
-var puertas = parseInt(prompt("Di el numero de puertas que habrá"))
+if (numPuertas == null ||numPuertas <= 0){
+    alert("Debes colocar un número válido");
+} else {
+    var puertas = parseInt (prompt("Di el número de puertas que habrá"));
+}
+
 if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
     alert("Debes introducir una cantidad mayor de 0");
 } else{
-    for (let i  = 0; i < puertas; i++){          // Sino, muestra las imagenes de los puertas tantas veces se haya escrito por teclado
+    document.write(`<div class = "images">`);
+
+    for (let i = 0; i < puertas; i++){
         document.write(`<div class="display">`);
+        document.write(`<h4>${numPuertas}</h4>`);
         document.write(`<img src = "images/Puerta.png">`);
         document.write(`</div>`);
+
+        numPuertas += 2;
     }
+
+    document.write(`</div>`);
 }
 
-
 /* ESCAPARATES Y OFERTAS */
-
 
 var escaparates = parseInt(prompt("Cuantos escaparates hay"));
 if (escaparates == null || escaparates <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
@@ -52,22 +59,42 @@ if (escaparates == null || escaparates <= 0){        // Si el numero escrito por
 var ofertas = parseInt(prompt("Escribe que descuento quieres"));
 print(ofertas);
 
-
-
 /* SEMAFOROS Y RELOJ */
+
 var hora = parseInt(prompt("¿Qué hora es?"))
 if (hora == null || hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o es superior a 24 o no se pone, lanza alerta
     alert("Esa hora no existe");
 } else {
     switch (hora){
         case 1 || 13:
+
+        case 2 || 14:
+
+        case 3 || 15:
+
+        case 4 || 16: 
+
+        case 5 || 17:
+
+        case 6 || 18:
+
+        case 7 || 19:
+
+        case 8 || 20: 
+
+        case 9 || 21: 
+
+        case 10 || 22: 
+
+        case 11 || 23:
+
+        case 12 || 24:
+
+        
     }
 }
 
-
 /* COCHES */
-
-
 
 
 
