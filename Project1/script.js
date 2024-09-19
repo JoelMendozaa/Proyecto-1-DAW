@@ -95,7 +95,6 @@ if (hora == null || hora <= 0 || hora > 24){       // Si la hora esrita es menor
 
         case 12 || 24:
 
-
     }
 }
 
