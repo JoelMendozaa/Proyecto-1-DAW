@@ -63,19 +63,6 @@ if (escaparates == null || escaparates <= 0){
     document.write(`</div>`);
 }
 
-/*if (escaparates == null || escaparates <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
-    alert("Debes introducir una cantidad mayor de 0");
-} else{
-    document.write(`<div class = "images">`);
-    for (let i  = 0; i < escaparates; i++){          // Sino, muestra las imagenes de los escaparates/tiendas tantas veces se haya escrito por teclado
-        document.write(`<div class="images">`);
-        document.write(`<img src = "images/Tienda.png">`);
-        document.write(`</div>`);
-    }
-    document.write(`</div>`);
-}*/
-
-
 
 /* SEMAFOROS Y RELOJ */
 
