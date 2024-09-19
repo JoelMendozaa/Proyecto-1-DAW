@@ -1,8 +1,11 @@
-.body{
+body{
     background: lightblue;
-    display: inline-block;
 }
 
-cartelText {
+.cartelText {
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.display{
+    display: inline-block;
 }
