@@ -59,8 +59,8 @@ var hora = parseInt(prompt("¿Qué hora es?"))
 if (hora == null || hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o es superior a 24 o no se pone, lanza alerta
     alert("Esa hora no existe");
 } else {
-    switch (){
-        
+    switch (hora){
+        case 1 || 13:
     }
 }
 
