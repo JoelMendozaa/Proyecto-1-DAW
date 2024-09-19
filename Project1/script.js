@@ -24,23 +24,33 @@ numPuertas +=2;
 document.write(`</div>`)
 
 var puertas = parseInt(prompt("Di el numero de puertas que habrá"))
-
-
-
-/* ESCAPARATES Y OFERTAS */
-var ofertas = parseInt(prompt("Escribe que descuento quieres"));
-print(ofertas);
-
-var escaparates = parseInt ("Cuantos escaparates hay");
-for (let i  = 0; escaparates > 0; i++){
-    if (escaparates == null){
-        alert("Debes introducir una cantidad mayor de 0");
-    } else {
-       img.src = "images/Tienda.png"
+if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
+    alert("Debes introducir una cantidad mayor de 0");
+} else{
+    for (let i  = 0; i < puertas; i++){          // Sino, muestra las imagenes de los puertas tantas veces se haya escrito por teclado
+        document.write(`<div class="display">`);
+        document.write(`<img src = "images/Puerta.png">`);
+        document.write(`</div>`);
     }
 }
 
 
+/* ESCAPARATES Y OFERTAS */
+
+
+var escaparates = parseInt(prompt("Cuantos escaparates hay"));
+if (escaparates == null || escaparates <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
+    alert("Debes introducir una cantidad mayor de 0");
+} else{
+    for (let i  = 0; i < escaparates; i++){          // Sino, muestra las imagenes de los escaparates/tiendas tantas veces se haya escrito por teclado
+        document.write(`<div class="display">`);
+        document.write(`<img src = "images/Tienda.png">`);
+        document.write(`</div>`);
+    }
+}
+
+var ofertas = parseInt(prompt("Escribe que descuento quieres"));
+print(ofertas);
 
 
 
