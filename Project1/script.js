@@ -18,13 +18,12 @@ for (let i  = 0; cartel > 0; i++){
     }
 }
 
-/* NUMEROS */
+/* NUMEROS Y PUERTAS */
 
+var numPuertas = parseInt(prompt ("Escribe el numero de puerta "));
+numPuertas +=2;
 
-
-/* PUERTAS */
-
-
+var puertas = parseInt(prompt("Di el numero de puertas que habrá"))
 
 /* ESCAPARATES Y OFERTAS */
 
