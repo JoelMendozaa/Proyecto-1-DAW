@@ -39,7 +39,7 @@ if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado
 }
 
 /* ESCAPARATES Y OFERTAS */
-var ofertas = parseInt(prompt("Escribe que descuento quieres"));
+var ofertas = prompt("Escribe que descuento quieres");
 if (ofertas <= 0){
     alert ("Por favor, coloca un número para saber el descuento deseado");
 } else if (ofertas >= 100){
@@ -121,25 +121,26 @@ if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o
 }
 
 var estado = false;
-var semaforo = prompt("¿De qué color está ahora el semáforo?").toLowerCase();
+var semaforo = prompt("¿De qué color está ahora el semáforo?");
 while (estado){
-    if (semaforo != "verde" || semaforo != "rojo" || semaforo != "amarillo"){
-        alert ("Ese color no existe")
-    } else if (semaforo == "verde"){
+    if (semaforo == "verde" || semaforo == "Verde"){
         document.write(`<img src="images/semaforoVerde.png"`);
         estado = true;
         console.log ("Cambio de estado");       // Se notifica por terminal el cambio de estado
-    } else if (semaforo == "rojo"){
+    } else if (semaforo == "rojo" || semaforo == "Rojo"){
         document.write(`<img src="images/semaforoRojo.png"`);
         estado = true;
         console.log ("Cambio de estado");
-    }else {
+    }else if (semaforo == "naranja" || semaforo == "Naranja" || semaforo == "amarillo" || semaforo == "Amarillo"){
         document.write(`<img src="images/semaforoNaranja.png"`);
         estado = true;
         console.log ("Cambio de estado");
-    }      
+    } else {
+        alert ("Ese color no existe");
+    }
 }
 document.write(`</div>`);
+
 
 /* COCHES */
 document.write(`<div class="images">`);
