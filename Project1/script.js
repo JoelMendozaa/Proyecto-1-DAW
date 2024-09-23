@@ -1,7 +1,4 @@
 
-
-
-
 /* CARTELES */
 var cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));
 
@@ -71,29 +68,53 @@ if (hora == null || hora <= 0 || hora > 24){       // Si la hora esrita es menor
     alert("Esa hora no existe");
 } else {
     switch (hora){
-        case 1 || 13:
+        case 1:
+        case 13:
+        break;
 
-        case 2 || 14:
+        case 2:
+        case 14:
+        break;
 
-        case 3 || 15:
+        case 3:
+        case 15:
+        break;
 
-        case 4 || 16: 
+        case 4: 
+        case 16: 
+        break;
 
-        case 5 || 17:
+        case 5: 
+        case 17:
+        break;
 
-        case 6 || 18:
+        case 6:
+        case 18:
+        break;
 
-        case 7 || 19:
+        case 7:
+        case 19:
+        break;
 
-        case 8 || 20: 
+        case 8:
+        case 20: 
+        break;
 
-        case 9 || 21: 
+        case 9:
+        case 21: 
+        break;
 
-        case 10 || 22: 
+        case 10:
+        case 22: 
+        break;
 
-        case 11 || 23:
+        case 11:
+        case 23:
+        break;
 
-        case 12 || 24:
+        case 12:
+        case 24:
+        break;
 
     }
 }
