@@ -2,12 +2,14 @@ body{
     background: lightblue;
 }
 
-.cartelText {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 .images{
-    display: flex;
-    width: 200px;
+    display: flex;  /* Me permite tener las imagen una al lado de otra */
+}
 
+
+.images img{
+    width: 200px;
+    object-fit: contain;    /* mantiene la proporción original de la imagen */
+    height: auto;
 }
