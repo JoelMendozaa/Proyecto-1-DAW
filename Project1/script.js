@@ -14,7 +14,6 @@ if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o i
 
 
 /* NUMEROS Y PUERTAS */
-
 var numPuertas = parseInt(prompt ("Escribe el numero de puerta por el que se inicia"));     // A través de un prompt, se pide un numero entero
 
 if (numPuertas <= 0){      // Si el numero introducido es menor o igual a 0 o en su defecto, no se ha colocado ninguno, saldrá una alerta
@@ -40,10 +39,11 @@ if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado
 }
 
 /* ESCAPARATES Y OFERTAS */
-
 var ofertas = parseInt(prompt("Escribe que descuento quieres"));
 if (ofertas <= 0){
     alert ("Por favor, coloca un número para saber el descuento deseado");
+} else if (ofertas >= 100){
+    alert ("No es posible dar un descuento mayor o igual al 100%")
 } else {
     var escaparates = parseInt(prompt("Cuantos escaparates hay"));
 }
@@ -70,7 +70,7 @@ if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o
     switch (hora){         // Dependiendo del numero escrito entre 1 y 24, aparecerá una imagen distinta
         case 1:
         case 13:
-            document.write(`<img src="images/Reloj1.jpg"`);
+            document.write(`<img src="images/Reloj1.jpg"`);     // En este caso, si el numero introducido es 1 o 13 aparecerá el reloj de las 1
         break;
         case 2:
         case 14:
@@ -120,26 +120,37 @@ if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o
     }
 }
 
-    var estado = true;
-    var semaforo = prompt("¿De qué color está ahora el semáforo?").toLowerCase();
-    while (estado){
-        if (semaforo != "verde" || semaforo != "rojo" || semaforo != "amarillo"){
-            alert ("Ese color no existe")
-        } else if (semaforo == "verde"){
-            document.write(`<img src="images/semaforoVerde.png"`);
-            estado = false;
-        } else if (semaforo == "rojo"){
-            document.write(`<img src="images/semaforoRojo.png"`);
-            estado = false;
-        }else {
-            document.write(`<img src="images/semaforoNaranja.png"`);
-            estado = false;
-        }      
-    }
+var estado = false;
+var semaforo = prompt("¿De qué color está ahora el semáforo?").toLowerCase();
+while (estado){
+    if (semaforo != "verde" || semaforo != "rojo" || semaforo != "amarillo"){
+        alert ("Ese color no existe")
+    } else if (semaforo == "verde"){
+        document.write(`<img src="images/semaforoVerde.png"`);
+        estado = true;
+        console.log ("Cambio de estado");       // Se notifica por terminal el cambio de estado
+    } else if (semaforo == "rojo"){
+        document.write(`<img src="images/semaforoRojo.png"`);
+        estado = true;
+        console.log ("Cambio de estado");
+    }else {
+        document.write(`<img src="images/semaforoNaranja.png"`);
+        estado = true;
+        console.log ("Cambio de estado");
+    }      
+}
 document.write(`</div>`);
 
 /* COCHES */
-
-
+document.write(`<div class="images">`);
+var coche = parseInt(prompt("¿Cuantos coches hay?"));   // Este prompt solo acepta numeros enteros
+if (coche <= 0){
+    alert("Siempre hay coches")
+} else {
+    for (let i  = 0; i < coche; i++){          // Sino, muestra las imagenes de los coches tantas veces se haya escrito por teclado
+        document.write(`<img src = "images/Coche.png">`);
+    }
+}
+document.write(`</div>`)
 
 
