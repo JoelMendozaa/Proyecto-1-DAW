@@ -2,16 +2,31 @@
 /* CARTELES */
 var cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));
 
+while (cartel > 0){      
+    if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
+        alert("Debes introducir una cantidad mayor de 0");
+    } else{
+        document.write(`<div class="images">`);
+        for (let i  = 0; i < cartel; i++){          // Sino, muestra las imagenes de los cartes tantas veces se haya escrito por teclado
+            document.write(`<img src = "images/WORTEN.png">`);
+            console.log ("Mostrando" + cartel)
+        }
+        document.write(`</div>`);
+    }
+}
+
+/*
 if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
     alert("Debes introducir una cantidad mayor de 0");
 } else{
     document.write(`<div class="images">`);
     for (let i  = 0; i < cartel; i++){          // Sino, muestra las imagenes de los cartes tantas veces se haya escrito por teclado
         document.write(`<img src = "images/WORTEN.png">`);
+        console.log ("Mostrando" + cartel)
     }
     document.write(`</div>`);
 }
-
+*/
 
 /* NUMEROS Y PUERTAS */
 var numPuertas = parseInt(prompt ("Escribe el numero de puerta por el que se inicia"));     // A través de un prompt, se pide un numero entero
@@ -53,7 +68,7 @@ if (escaparates <= 0){
     document.write(`<div class = "images">`);
     for (let i = 0; i < escaparates; i++){          // Por cada puerta que aparece según el numero introducido
         document.write(`<div>`);
-        document.write(`<h4>${ofertas}</h4>`);       // Aparecen el numero de las puertas
+        document.write(`<h4>${ofertas} %</h4>`);       // Aparecen el numero de las puertas
         document.write(`<img src = "images/Tienda.png">`);
         document.write(`</div>`);
     }
@@ -70,71 +85,83 @@ if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o
     switch (hora){         // Dependiendo del numero escrito entre 1 y 24, aparecerá una imagen distinta
         case 1:
         case 13:
-            document.write(`<img src="images/Reloj1.jpg"`);     // En este caso, si el numero introducido es 1 o 13 aparecerá el reloj de las 1
+            document.write(`<img src="images/Reloj1.jpg">`);     // En este caso, si el numero introducido es 1 o 13 aparecerá el reloj de las 1
+            console.log ("Cambio de estado" + hora)
         break;
         case 2:
         case 14:
-            document.write(`<img src="images/Reloj2.jpg"`);
+            document.write(`<img src="images/Reloj2.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 3:
         case 15:
-            document.write(`<img src="images/Reloj3.jpg"`);
+            document.write(`<img src="images/Reloj3.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 4: 
         case 16:
-            document.write(`<img src="images/Reloj4.jpg"`);
+            document.write(`<img src="images/Reloj4.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 5: 
         case 17:
-            document.write(`<img src="images/Reloj5.jpg"`);
+            document.write(`<img src="images/Reloj5.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 6:
         case 18:
-            document.write(`<img src="images/Reloj6.jpg"`);
+            document.write(`<img src="images/Reloj6.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 7:
         case 19:
-            document.write(`<img src="images/Reloj7.jpg"`);
+            document.write(`<img src="images/Reloj7.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 8:
         case 20:
-            document.write(`<img src="images/Reloj8.jpg"`);
+            document.write(`<img src="images/Reloj8.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 9:
         case 21:
-            document.write(`<img src="images/Reloj9.jpg"`);
+            document.write(`<img src="images/Reloj9.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 10:
         case 22:
-            document.write(`<img src="images/Reloj10.jpg"`);
+            document.write(`<img src="images/Reloj10.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 11:
         case 23:
-            document.write(`<img src="images/Reloj11.jpg"`);
+            document.write(`<img src="images/Reloj11.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
         case 12:
         case 24:
-            document.write(`<img src="images/Reloj12.jpg"`);
+            document.write(`<img src="images/Reloj12.jpg">`);
+            console.log ("Cambio de estado" + hora)
         break;
 
     }
 }
 
 var estado = false;
-var semaforo = prompt("¿De qué color está ahora el semáforo?");
-while (estado){
+while (!estado){
+    var semaforo = prompt("¿De qué color está ahora el semáforo?");
     if (semaforo == "verde" || semaforo == "Verde"){
-        document.write(`<img src="images/semaforoVerde.png"`);
+        document.write(`<img src="images/semaforoVerde.png">`);
         estado = true;
-        console.log ("Cambio de estado");       // Se notifica por terminal el cambio de estado
+        console.log ("Cambio de estado" + semaforo);       // Se notifica por terminal el cambio de estado
     } else if (semaforo == "rojo" || semaforo == "Rojo"){
-        document.write(`<img src="images/semaforoRojo.png"`);
+        document.write(`<img src="images/semaforoRojo.png">`);
         estado = true;
-        console.log ("Cambio de estado");
+        console.log ("Cambio de estado" + semaforo);
     }else if (semaforo == "naranja" || semaforo == "Naranja" || semaforo == "amarillo" || semaforo == "Amarillo"){
-        document.write(`<img src="images/semaforoNaranja.png"`);
+        document.write(`<img src="images/semaforoNaranja.png">`);
         estado = true;
-        console.log ("Cambio de estado");
+        console.log ("Cambio de estado" + semaforo);
     } else {
         alert ("Ese color no existe");
     }
@@ -150,8 +177,7 @@ if (coche <= 0){
 } else {
     for (let i  = 0; i < coche; i++){          // Sino, muestra las imagenes de los coches tantas veces se haya escrito por teclado
         document.write(`<img src = "images/Coche.png">`);
+        console.log ("Mostrando" + coche)
     }
 }
 document.write(`</div>`)
-
-
