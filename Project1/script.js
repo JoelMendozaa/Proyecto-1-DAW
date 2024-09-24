@@ -2,23 +2,11 @@
 /* CARTELES */
 var cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));
 
-while (cartel > 0){      
-    if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
-        alert("Debes introducir una cantidad mayor de 0");
-    } else{
-        document.write(`<div class="images">`);
-        for (let i  = 0; i < cartel; i++){          // Sino, muestra las imagenes de los cartes tantas veces se haya escrito por teclado
-            document.write(`<img src = "images/WORTEN.png">`);
-            console.log ("Mostrando" + cartel)
-        }
-        document.write(`</div>`);
-    }
+while (cartel <= 0){    // Mientras cartel sea menor o igual a 0
+    alert("Debes introducir una cantidad mayor de 0");      // Alerta 
+    cartel = parseInt(prompt("Escriba el número del carteles que busca por favor"));     // Vuelve a  lanzar la pregunta todas las veces en las que el numero introducido no sea el correcto
 }
-
-/*
-if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o igual a 0, lanza alerta
-    alert("Debes introducir una cantidad mayor de 0");
-} else{
+if (cartel > 0) {
     document.write(`<div class="images">`);
     for (let i  = 0; i < cartel; i++){          // Sino, muestra las imagenes de los cartes tantas veces se haya escrito por teclado
         document.write(`<img src = "images/WORTEN.png">`);
@@ -26,14 +14,16 @@ if (cartel <= 0){        // Si el numero escrito por teclado es nulo o menor o i
     }
     document.write(`</div>`);
 }
-*/
+
 
 /* NUMEROS Y PUERTAS */
 var numPuertas = parseInt(prompt ("Escribe el numero de puerta por el que se inicia"));     // A través de un prompt, se pide un numero entero
 
-if (numPuertas <= 0){      // Si el numero introducido es menor o igual a 0 o en su defecto, no se ha colocado ninguno, saldrá una alerta
+while (numPuertas <= 0){
     alert("Debes colocar un número válido");
-} else {
+    numPuertas = parseInt(prompt ("Escribe el numero de puerta por el que se inicia"));
+}
+if (numPuertas > 0) {
     var puertas = parseInt (prompt("Di el número de puertas que habrá"));       // A través de un prompt, se pide un numero entero
 }
 
@@ -47,7 +37,7 @@ if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado
         document.write(`<img src = "images/Puerta.png">`);
         document.write(`</div>`);
 
-        numPuertas += 2;        // Sin importar el número que sea, se le sumará +2 para que este aumente según la puerta
+        numPuertas += 2;        // Sin importar el número que sea, se le sumará +2 para que este aumente según la puerta para que siempre sea par o impar
     }
 
     document.write(`</div>`);
@@ -55,16 +45,19 @@ if (puertas == null || puertas <= 0){        // Si el numero escrito por teclado
 
 /* ESCAPARATES Y OFERTAS */
 var ofertas = prompt("Escribe que descuento quieres");
-if (ofertas <= 0){
-    alert ("Por favor, coloca un número para saber el descuento deseado");
-} else if (ofertas >= 100){
-    alert ("No es posible dar un descuento mayor o igual al 100%")
-} else {
+
+while(ofertas <= 0 || ofertas >= 100){      // Mientras ofertas sea menor o igual a 0 o mayor o igual a 100
+    alert ("Por favor, coloca un número para saber el descuento deseado que no sea 0 ni 100");      // Lanza alerta
+    ofertas = prompt("Escribe que descuento quieres");      // Realiza la pregunta
+}
+if (ofertas > 0) {
     var escaparates = parseInt(prompt("Cuantos escaparates hay"));
 }
-if (escaparates <= 0){  
+while (escaparates <= 0){
     alert("Debes introducir una cantidad mayor de 0");
-} else{
+    escaparates = parseInt(prompt("Cuantos escaparates hay"));
+} 
+if (escaparates > 0){
     document.write(`<div class = "images">`);
     for (let i = 0; i < escaparates; i++){          // Por cada puerta que aparece según el numero introducido
         document.write(`<div>`);
@@ -79,9 +72,12 @@ if (escaparates <= 0){
 /* SEMAFOROS Y RELOJ */
 document.write(`<div class="images">`);
 var hora = parseInt(prompt("¿Qué hora es?"));
-if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o es superior a 24 o no se pone, lanza alerta
+while (hora <= 0 || hora > 24){
     alert("Esa hora no existe");
-} else {
+    hora = parseInt(prompt("¿Qué hora es?"));
+}
+ 
+if (hora > 0 || hora <= 24) {
     switch (hora){         // Dependiendo del numero escrito entre 1 y 24, aparecerá una imagen distinta
         case 1:
         case 13:
@@ -148,7 +144,7 @@ if (hora <= 0 || hora > 24){       // Si la hora esrita es menor o igual que 0 o
 }
 
 var estado = false;
-while (!estado){
+while (!estado){    // Mientras sea difierente el estado
     var semaforo = prompt("¿De qué color está ahora el semáforo?");
     if (semaforo == "verde" || semaforo == "Verde"){
         document.write(`<img src="images/semaforoVerde.png">`);
@@ -172,9 +168,12 @@ document.write(`</div>`);
 /* COCHES */
 document.write(`<div class="images">`);
 var coche = parseInt(prompt("¿Cuantos coches hay?"));   // Este prompt solo acepta numeros enteros
-if (coche <= 0){
+
+while (coche <= 0){
     alert("Siempre hay coches")
-} else {
+    coche = parseInt(prompt("¿Cuantos coches hay?"));
+}
+if (coche > 0) {
     for (let i  = 0; i < coche; i++){          // Sino, muestra las imagenes de los coches tantas veces se haya escrito por teclado
         document.write(`<img src = "images/Coche.png">`);
         console.log ("Mostrando" + coche)
